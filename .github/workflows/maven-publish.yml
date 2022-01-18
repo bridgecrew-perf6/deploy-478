@@ -21,7 +21,6 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
     - name: install
-      run:
-        ls
+      run: ls
 
         
