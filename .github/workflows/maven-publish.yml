@@ -21,6 +21,8 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        server-username: ${{ secrets.MAVEN_USERNAME }} # env variable for username in deploy
+        server-password: ${{ secrets.MAVEN_PASSWORD }} # env variable for token in deploy
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     - name: Build with Maven # maven이용 war파일 빌드
       run: mvn -B package --file deploy/pom.xml
