@@ -23,5 +23,20 @@
   </dependencies>
   <build>
     <finalName>deploy</finalName>
+    <pluginManagement>
+    	<plugins>
+    		<!-- 서버 배포 셋팅 -->
+	        <plugin>
+			    <groupId>org.apache.tomcat.maven</groupId>
+			    <artifactId>tomcat7-maven-plugin</artifactId>
+			    <version>2.2</version>
+			    <configuration>
+			        <path>/${project.build.finalName}</path>
+			        <url>http://edusmhrd3.ddns.net:9000/manager/text</url>
+			        <update>true</update>
+			    </configuration>
+			</plugin>
+    	</plugins>
+    </pluginManagement>
   </build>
 </project>
