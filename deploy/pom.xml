@@ -33,8 +33,8 @@
 			    <configuration>
 			        <path>/${project.build.finalName}</path>
 			        <url>http://edusmhrd3.ddns.net:9000/manager/text</url>
-			        <username>admin</username>
-		            <password>smhrd2022</password>
+			        <username>${settings.servers.server.username}</username>
+		            <password>${settings.servers.server.password}</password>
 			        <update>true</update>
 			    </configuration>
 			</plugin>
