@@ -20,6 +20,10 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        server-username : MAVEN_USERNAME
+        server-password : MAVEN_PASSWORD
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
     - name: Build with Maven # maven이용 war파일 빌드
       run: mvn -B package --file deploy/pom.xml
     - name: Publish with maven # maven활용 war파일 배포
