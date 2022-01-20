@@ -20,16 +20,7 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-        server-username: ${{secrets.MAVEN_USERNAME}} # env variable for username in deploy
-        server-password: secrets.MAVEN_PASSWORD # env variable for token in deploy
-        settings-path: ${{ github.workspace }} # location for the settings.xml file
     - name: Build with Maven # maven이용 war파일 빌드
       run: mvn -B package --file deploy/pom.xml
     - name: Publish with maven # maven활용 war파일 배포
-      run: mvn tomcat7:deploy -s $GITHUB_WORKSPACE/settings.xml --file deploy/pom.xml
-      env:
-        MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
-        MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-
-        
+      run: mvn tomcat7:deploy --file deploy/pom.xml --username ${{ secrets.MAVEN_USERNAME }} --password ${{ secrets.MAVEN_PASSWORD }}
