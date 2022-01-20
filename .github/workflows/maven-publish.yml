@@ -23,4 +23,4 @@ jobs:
     - name: Build with Maven # maven이용 war파일 빌드
       run: mvn -B package --file deploy/pom.xml
     - name: Publish with maven # maven활용 war파일 배포
-      run: mvn tomcat7:redeploy -Dusername=admin -Dpassword=smhrd2022
+      run: mvn tomcat7:redeploy -Dusername=admin -Dpassword=smhrd2022 --file deploy/pom.xml 
