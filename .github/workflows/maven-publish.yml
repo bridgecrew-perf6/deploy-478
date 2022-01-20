@@ -26,9 +26,5 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     - name: Build with Maven # maven이용 war파일 빌드
       run: mvn -B package --file deploy/pom.xml
-    - name: Publish to GitHub Packages Apache Maven # maven이용 war파일 배포
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml --file deploy/pom.xml
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
 
         
