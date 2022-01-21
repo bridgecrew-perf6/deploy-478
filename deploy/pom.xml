@@ -31,6 +31,7 @@
 			    <artifactId>tomcat7-maven-plugin</artifactId>
 			    <version>2.2</version>
 			    <configuration>
+			    	<server>github</server>
 			        <path>/${project.build.finalName}</path>
 			        <url>http://edusmhrd3.ddns.net:9000/manager/text</url>
 			        <update>true</update>
