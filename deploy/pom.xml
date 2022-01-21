@@ -34,6 +34,8 @@
 			    	<server>github</server>
 			        <path>/${project.build.finalName}</path>
 			        <url>http://edusmhrd3.ddns.net:9000/manager/text</url>
+			        <username></username>
+			        <password></password>
 			        <update>true</update>
 			    </configuration>
 			</plugin>
