@@ -33,7 +33,7 @@
 			    <configuration>
 			    	<server>github</server>
 			        <path>/${project.build.finalName}</path>
-			        <url>http://edusmhrd3.ddns.net:9000/manager/text</url>
+			        <url>${my.url}</url>
 			        <username>${my.username}</username>
 			        <password>${my.password}</password>
 			        <update>true</update>
