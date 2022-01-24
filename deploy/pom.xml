@@ -34,7 +34,33 @@
 			    	<server>github</server>
 			        <path>/${project.build.finalName}</path>
 			        <url>http://edusmhrd3.ddns.net:9000/manager/text</url>
-			        <username></username>
+			        <username><!-- 서버 배포 셋팅 -->
+	        <plugin>
+			    <groupId>org.apache.tomcat.maven</groupId>
+			    <artifactId>tomcat7-maven-plugin</artifactId>
+			    <version>2.2</version>
+			    <configuration>
+			    	<server>github</server>
+			        <path>/${project.build.finalName}</path>
+			        <url>http://edusmhrd3.ddns.net:9000/manager/text</url>
+			        <username><!-- 서버 배포 셋팅 -->
+	        <plugin>
+			    <groupId>org.apache.tomcat.maven</groupId>
+			    <artifactId>tomcat7-maven-plugin</artifactId>
+			    <version>2.2</version>
+			    <configuration>
+			    	<server>github</server>
+			        <path>/${project.build.finalName}</path>
+			        <url>http://edusmhrd3.ddns.net:9000/manager/text</url>
+			        <username>${my.username}</username>
+			        <password>${my.password}</password>
+			        <update>true</update>
+			    </configuration>
+			</plugin></username>
+			        <password></password>
+			        <update>true</update>
+			    </configuration>
+			</plugin></username>
 			        <password></password>
 			        <update>true</update>
 			    </configuration>
