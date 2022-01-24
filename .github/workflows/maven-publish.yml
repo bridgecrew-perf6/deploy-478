@@ -21,4 +21,4 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
     - name: Publish with maven # maven활용 war파일 배포
-      run: mvn tomcat7:deploy --file deploy/pom.xml -Dmy.url='http://edusmhrd3.ddns.net:9000/manager/text' -Dmy.username='admin' -Dmy.password='smhrd2022'
+      run: mvn tomcat7:deploy --file deploy/pom.xml -Dmy.url='http://edusmhrd3.ddns.net:9000/manager/text' -Dmy.username=${{env.MAEN_USERNAME}} -Dmy.password='smhrd2022'
