@@ -27,4 +27,4 @@ jobs:
     - name: Publish with maven # maven활용 war파일 배포
       env :
         MAVEN_USERNAME : ${{secrets.MAVEN_USERNAME}}
-      run: mvn tomcat7:deploy --file deploy/pom.xml -Dmy.url='http://edusmhrd3.ddns.net:9000/manager/text' -Dmy.username='$MAVEN_USERNAME' -Dmy.password='smhrd2022'
+      run: mvn tomcat7:deploy --file deploy/pom.xml -Dmy.url='http://edusmhrd3.ddns.net:9000/manager/text' -Dmy.username=$MAVEN_USERNAME -Dmy.password='smhrd2022'
