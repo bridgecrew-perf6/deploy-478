@@ -20,6 +20,8 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
+    - name : dd
+      run : echo ${{secrets.MAVEN_USERNAME}}
     - name: Publish with maven # maven활용 war파일 배포
       env :
         MAVEN_USERNAME : ${{secrets.MAVEN_USERNAME}}
